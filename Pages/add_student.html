@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+</head>
+
+<body>
+<header>
+  <!--Name of the college on the left-->
+  <h3>FCAI-CU</h3>
+
+  <!--links to the other pages - (links' paths to other pages will be updated when finished) - their positions will be done in CSS-->
+  <ul>
+    <li><a href="main_menu.html">Home</a></li>
+    <li><a href="add_student.html">Add student</a></li>
+    <li><a href="">Update data</a></li>
+    <li><a href="">Students List</a></li>
+  </ul>
+</header>
+
+<!--content of the page-->
+<section>
+  <aside>
+    <form>
+
+<!--first name input-->
+    <label for="first">First Name:*</label>
+      <input type="text" id="first" name="first" placeholder="ex: Adham" required>
+      <br>
+      <br>
+<!--last name input-->
+    <label for="last">Last Name:*</label>
+      <input type="text" id="last" name="last" placeholder="ex: Tarek" required>
+      <br>
+      <br>
+
+<!--gender input-->
+    <label for="gender">Gender:*</label>
+      <select id="gender" name="gender" required>
+      <option disabled selected>Select..</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <br>
+    <br>
+
+<!--date input-->
+    <label for="date">Date of Birth:*</label>
+      <input type="date" id="date" name="date" required>
+      <br>
+      <br>
+
+<!--gpa input-->
+    <label for="gpa">GPA:*</label>
+      <input type="text" id="gpa" name="gpa" placeholder="ex: 3.26" required>
+      <br>
+      <br>
+
+<!--department input-->
+    <label for="department">Department:*</label>
+      <select id="department" name="department" required>
+        <option disabled selected>Select..</option>
+        <option value="CS">CS</option>
+        <option value="AI">AI</option>
+        <option value="IS">IS</option>
+        <option value="IT">IT</option>
+        <option value="DS">DS</option>
+      </select>
+      <br>
+      <br>
+
+<!--level input-->
+    <label for="level">Level:*</label>
+      <select id="level" name="level" required>
+        <option disabled selected>Select..</option>
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+        <option value="four">4</option>
+      </select>
+      <br>
+      <br>
+
+<!--id input-->
+      <label for="id">ID:*</label>
+        <input type="text" id="id" name="id" placeholder="ex: 20210051" required>
+      <br>
+      <br>
+
+<!--status input-->
+      <label for="status">Status:*</label>
+        <select id="status" name="status" required>
+        <option disabled selected>Select..</option>
+        <option value="enrolled">Enrolled in</option>
+        <option value="exiting">Exiting</option>
+        <option value="re-entering">Re-entering</option>
+      </select>
+      <br>
+      <br>
+
+<!--phone number input-->
+      <label for="phone">Phone Number:*</label>
+        <input type="text" id="phone" name="phone" placeholder="ex: 01128604011" required>
+        <br>
+        <br>
+
+<!--email input-->
+      <label for="email">Email:*</label>
+        <input type="email" id="email" name="email" placeholder="ex: domatarek2003@gmail.com" required>
+        <br>
+        <br>
+
+<!--submit button-->
+      <input type="submit">
+    </form>
+  </aside>
+</section>
+</body>
+
+</html>
