@@ -1,152 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Add Student</title>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
 </head>
 
 <body>
-<<<<<<< HEAD
 <header>
   <!--Name of the college on the left-->
-  <<h3><a href="">FCAI-CU</a></h3>
-=======
-  <header>
-    <!--Name of the college on the left-->
-    <h3>FCAI-CU</h3>
->>>>>>> e0ae44f (Add file Student_list)
+  <h3><a href="info.html">FCAI-CU</a></h3>
 
-    <!--links to the other pages - (links' paths to other pages will be updated when finished) - their positions will be done in CSS-->
-    <ul>
-      <li><a href="main_menu.html">Home</a></li>
-      <li><a href="add_student.html">Add student</a></li>
-      <li><a href="Update.html">Update data</a></li>
-      <li><a href="Student_list.html">Students List</a></li>
-    </ul>
-  </header>
+  <!--links to the other pages - (links' paths to other pages will be updated when finished) - their positions will be done in CSS-->
+  <ul>
+    <li><a href="main_menu.html">Home</a></li>
+    <li><a href="add_student.html">Add student</a></li>
+    <li><a href="">Assign Department</a></li>
+    <li><a href="Update.html">Update data</a></li>
+    <li><a href="Student_list.html">Students List</a></li>
+  </ul>
+</header>
 
-  <!--content of the page-->
-  <section>
-    <aside>
-      <form>
+<!--content of the page-->
+<section>
+  <aside>
+    <form>
 
-        <!--first name input-->
-        <div>
-          <label for="first">First Name:*</label>
-          <input type="text" id="first" name="first" placeholder="ex: Adham" required>
-        </div>
-        <br>
-        <br>
-        <!--last name input-->
-        <div>
-          <label for="last">Last Name:*</label>
-          <input type="text" id="last" name="last" placeholder="ex: Tarek" required>
-        </div>
-        <br>
-        <br>
+<!--first name input-->
+      <div>
+    <label for="first">First Name:*</label>
+      <input type="text" id="first" name="first" placeholder="ex: Adham" required>
+      </div>
+      <br>
+      <br>
+<!--last name input-->
+      <div>
+    <label for="last">Last Name:*</label>
+      <input type="text" id="last" name="last" placeholder="ex: Tarek" required>
+      </div>
+      <br>
+      <br>
 
-        <!--gender input-->
-        <div>
-          <label for="gender">Gender:*</label>
-          <select id="gender" name="gender" required>
-            <option disabled selected>Select..</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        </div>
-        <br>
-        <br>
+<!--gender input-->
+      <div>
+    <label for="gender">Gender:*</label>
+      <select id="gender" name="gender" required>
+      <option disabled selected>Select..</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+      </div>
+    <br>
+    <br>
 
-        <!--date input-->
-        <div>
-          <label for="date">Date of Birth:*</label>
-          <input type="date" id="date" name="date" required>
-        </div>
-        <br>
-        <br>
+<!--date input-->
+      <div>
+    <label for="date">Date of Birth:*</label>
+      <input type="date" id="date" name="date" required>
+      </div>
+      <br>
+      <br>
 
-        <!--gpa input-->
-        <div>
-          <label for="gpa">GPA:*</label>
-          <input type="text" id="gpa" name="gpa" placeholder="ex: 3.26" required>
-        </div>
-        <br>
-        <br>
+<!--gpa input-->
+      <div>
+    <label for="gpa">GPA:*</label>
+      <input type="text" id="gpa" name="gpa" placeholder="ex: 3.26" required>
+      </div>
+      <br>
+      <br>
 
-        <!--department input-->
-        <div>
-          <label for="department">Department:*</label>
-          <select id="department" name="department" required>
-            <option disabled selected>Select..</option>
-            <option value="CS">CS</option>
-            <option value="AI">AI</option>
-            <option value="IS">IS</option>
-            <option value="IT">IT</option>
-            <option value="DS">DS</option>
-          </select>
-        </div>
-        <br>
-        <br>
+<!--department input-->
+      <div>
+    <label for="department">Department:*</label>
+      <select id="department" name="department" required>
+        <option disabled selected>Select..</option>
+        <option value="CS">CS</option>
+        <option value="AI">AI</option>
+        <option value="IS">IS</option>
+        <option value="IT">IT</option>
+        <option value="DS">DS</option>
+      </select>
+      </div>
+      <br>
+      <br>
 
-        <!--level input-->
-        <div>
-          <label for="level">Level:*</label>
-          <select id="level" name="level" required>
-            <option disabled selected>Select..</option>
-            <option value="one">1</option>
-            <option value="two">2</option>
-            <option value="three">3</option>
-            <option value="four">4</option>
-          </select>
-        </div>
-        <br>
-        <br>
+<!--level input-->
+      <div>
+    <label for="level">Level:*</label>
+      <select id="level" name="level" required>
+        <option disabled selected>Select..</option>
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+        <option value="four">4</option>
+      </select>
+      </div>
+      <br>
+      <br>
 
-        <!--id input-->
-        <div>
-          <label for="id">ID:*</label>
-          <input type="text" id="id" name="id" placeholder="ex: 20210051" required>
-        </div>
-        <br>
-        <br>
+<!--id input-->
+      <div>
+      <label for="id">ID:*</label>
+        <input type="text" id="id" name="id" placeholder="ex: 20210051" required>
+      </div>
+      <br>
+      <br>
 
-        <!--status input-->
-        <div>
-          <label for="status">Status:*</label>
-          <select id="status" name="status" required>
-            <option disabled selected>Select..</option>
-            <option value="enrolled">Enrolled in</option>
-            <option value="exiting">Exiting</option>
-            <option value="re-entering">Re-entering</option>
-          </select>
-        </div>
-        <br>
-        <br>
+<!--status input-->
+      <div>
+      <label for="status">Status:*</label>
+        <select id="status" name="status" required>
+        <option disabled selected>Select..</option>
+        <option value="enrolled">Enrolled in</option>
+        <option value="exiting">Exiting</option>
+        <option value="re-entering">Re-entering</option>
+      </select>
+      </div>
+      <br>
+      <br>
 
-        <!--phone number input-->
-        <div>
-          <label for="phone">Phone Number:*</label>
-          <input type="text" id="phone" name="phone" placeholder="ex: 01128604011" required>
-        </div>
+<!--phone number input-->
+      <div>
+      <label for="phone">Phone Number:*</label>
+        <input type="text" id="phone" name="phone" placeholder="ex: 01128604011" required>
+      </div>
         <br>
         <br>
 
-        <!--email input-->
-        <div>
-          <label for="email">Email:*</label>
-          <input type="email" id="email" name="email" placeholder="ex: domatarek2003@gmail.com" required>
-        </div>
+<!--email input-->
+      <div>
+      <label for="email">Email:*</label>
+        <input type="email" id="email" name="email" placeholder="ex: domatarek2003@gmail.com" required>
+      </div>
         <br>
         <br>
 
-        <!--submit button-->
-        <div>
-          <input type="submit">
-        </div>
-      </form>
-    </aside>
-  </section>
+<!--submit button-->
+      <div>
+      <input type="submit">
+      </div>
+    </form>
+  </aside>
+</section>
 </body>
 
 </html>
