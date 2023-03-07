@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Official Site For FCAI-CU Students Affairs">
+  <link rel="stylesheet" href="style.css">
+  <title>Main Menu</title>
+</head>
+
+<body>
+  <header>
+    <!--Name of the college on the left-->
+    <h3 class="head"><a href="info.html">FCAI-CU</a></h3>
+
+    <!--links to the other pages - (links' paths to other pages will be updated when finished) - their positions will be done in CSS-->
+    <ul>
+      <li><a href="main_menu.html">Home</a></li>
+      <li><a href="add_student.html">Add student</a></li>
+      <li><a href="assign_department.html">Assign Department</a></li>
+      <li><a href="Update.html">Update data</a></li>
+      <li><a href="Student_list.html">Students List</a></li>
+
+    </ul>
+  </header>
+  <section>
+    <aside>
+      <div class="search">
+        <label for="search"></label>
+        <input id="search" type="search" name="id" placeholder="ex:20210069" formmethod="get" required>
+        <input type="submit" formmethod="get">
+      </div>
+
+      <div>
+        <table border="2" style="width: 100%;">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Level</th>
+            <th>Department</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>Ahmed Mohamed</td>
+            <td>20210033</td>
+            <td>3</td>
+            <td>
+              <select name="department" required>
+                <option disabled selected>Select..</option>
+                <option disabled>General</option>
+                <option selected>CS</option>
+                <option>AI</option>
+                <option>IS</option>
+                <option>IT</option>
+                <option>DS</option>
+            </select>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Adham Tarek</td>
+            <td>20210478</td>
+            <td>1</td>
+            <td>
+              <select name="department" disabled required>
+                <option disabled selected>Select..</option>
+                <option selected>General</option>
+            </select>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Ismail Magdy</td>
+            <td>20210069</td>
+            <td>4</td>
+            <td>
+              <select name="department" required>
+                <option disabled >Select..</option>
+                <option disabled>General</option>
+                <option selected>CS</option>
+                <option>AI</option>
+                <option>IS</option>
+                <option>IT</option>
+                <option>DS</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Ammar Ayman</td>
+            <td>20210253</td>
+            <td>3</td>
+            <td>
+              <select name="department" required>
+                <option disabled selected>Select..</option>
+                <option disabled>General</option>
+                <option>CS</option>
+                <option>AI</option>
+                <option>IS</option>
+                <option>IT</option>
+                <option>DS</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Malek Khaled</td>
+            <td>20210320</td>
+            <td>3</td>
+            <td>
+              <select name="department" required>
+                <option disabled selected>Select..</option>
+                <option disabled>General</option>
+                <option>CS</option>
+                <option>AI</option>
+                <option>IS</option>
+                <option>IT</option>
+                <option>DS</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Yousef Alaa</td>
+            <td>20210478</td>
+            <td>3</td>
+            <td>
+              <select name="department" required>
+                <option disabled>Select..</option>
+                <option disabled>General</option>
+                <option>CS</option>
+                <option>AI</option>
+                <option>IS</option>
+                <option selected>IT</option>
+                <option>DS</option>
+              </select>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <input type="submit"  value="Save">
+      </div>
+    </aside>
+  </section>
+</body>
