@@ -12,7 +12,7 @@
         <ul>
             <li><a href="main_menu.html">Home</a></li>
             <li><a href="add_student.html">Add student</a></li>
-            <li><a href="">Assign Department</a></li>
+            <li><a href="assign_department.html">Assign Department</a></li>
             <li><a href="Update.html">Update data</a></li>
             <li><a href="Student_list.html">Students List</a></li>
         </ul>
@@ -21,22 +21,63 @@
     <section>
         <!-- search bar and list of students -->
         <div class="search bar">
-            <label for="search"></label>
-            <input type="search" id="search" name="search" placeholder="Search..">
-            <button>Search</button>
-            <!-- (<input type="submit" value="Search">) : I don't know which is more correct button or input to search> -->
+            <form >
+                <label for="Search"></label>
+                <input style="border-radius: 30px;" type="search" id="Search" name="search" placeholder="Search" required autocomplete="off">
+                <button type="submit" style="border-radius: 30px;">Search</button>
+            </form>
         </div>
         <div>
-            <ol>
-                <li>Ahmed Taha</li>
-                <li>Malik Khalid</li>
-                <li>Adham Tarek</li>
-                <li>Ismall Magdy</li>
-                <li>Ammar Ayman</li>
-            </ol>
+            <table border="2">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>ID</th>
+                </tr>
+                </thead>
+                <body>
+                <tr>
+                    <td>1</td>
+                    <td>Ahmed Mohamed</td>
+                    <td>20210033</td>
+                    <td><button>Edit</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Malik Khalid</td>
+                    <td>20210320</td>
+                    <td><button>Edit</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Adham Tarek</td>
+                    <td>20210051</td>
+                    <td><button>Edit</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Ammar Ayman</td>
+                    <td>20210253</td>
+                    <td><button>Edit</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Ismail Magdy</td>
+                    <td>20210069</td>
+                    <td><button>Edit</button></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Youssef Alaa</td>
+                    <td>20210478</td>
+                    <td><button>Edit</button></td>
+                </tr>
+                </body>
         </div>
     </section>
     <hr>
+    <select>
     <form>
         <!-- I made const value right now but the value will be the student's data who we selected -->
         <!--first name input-->
@@ -131,9 +172,9 @@
         <input type="submit" value="Update">
         <!-- delete button this is reset don't delete the student just clear the form -->
         <input type="reset" value="Delete">
+        <br>
+        <hr>
     </form>
-    <section>
-
     </section>
 </body>
 
