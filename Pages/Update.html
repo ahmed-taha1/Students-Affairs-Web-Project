@@ -7,175 +7,180 @@
 </head>
 
 <body>
-    <header>
-        <h3><a href="info.html">FCAI-CU</a></h3>
-        <ul>
-            <li><a href="main_menu.html">Home</a></li>
-            <li><a href="add_student.html">Add student</a></li>
-            <li><a href="assign_department.html">Assign Department</a></li>
-            <li><a href="Update.html">Update data</a></li>
-            <li><a href="Student_list.html">Students List</a></li>
-        </ul>
-    </header>
+<link rel="stylesheet" href="">
+<header>
+    <h3><a href="info.html">FCAI-CU</a></h3>
+    <ul>
+        <li><a href="main_menu.html">Home</a></li>
+        <li><a href="add_student.html">Add student</a></li>
+        <li><a href="assign_department.html">Assign Department</a></li>
+        <li><a href="Update.html">Update data</a></li>
+        <li><a href="Student_list.html">Students List</a></li>
+    </ul>
+</header>
+<hr>
+<section>
+    <!-- search bar and list of students -->
+    <div class="search bar">
+        <form >
+            <label for="Search"></label>
+            <input style="border-radius: 30px;" type="search" id="Search" name="search" placeholder="Search" required autocomplete="off">
+            <button type="submit" style="border-radius: 30px;">Search</button>
+        </form>
+    </div>
+    <div>
+        <table border="2">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Ahmed Mohamed</td>
+                <td>20210033</td>
+                <td>Active</td>
+                <td><button>Edit</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Malik Khalid</td>
+                <td>20210320</td>
+                <td>Active</td>
+                <td><button>Edit</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Adham Tarek</td>
+                <td>20210051</td>
+                <td>Inactive</td>
+                <td><button>Edit</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Ammar Ayman</td>
+                <td>20210253</td>
+                <td>Active</td>
+                <td><button>Edit</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Ismail Magdy</td>
+                <td>20210069</td>
+                <td>Active</td>
+                <td><button>Edit</button></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Youssef Alaa</td>
+                <td>20210478</td>
+                <td>Active</td>
+                <td><button>Edit</button></td>
+            </tr>
+            </thead>
+        </table>
+    </div>
     <hr>
-    <section>
-        <!-- search bar and list of students -->
-        <div class="search bar">
-            <form >
-                <label for="Search"></label>
-                <input style="border-radius: 30px;" type="search" id="Search" name="search" placeholder="Search" required autocomplete="off">
-                <button type="submit" style="border-radius: 30px;">Search</button>
-            </form>
-        </div>
-        <div>
-            <table border="2">
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>ID</th>
-                </tr>
-                </thead>
-                <body>
-                <tr>
-                    <td>1</td>
-                    <td>Ahmed Mohamed</td>
-                    <td>20210033</td>
-                    <td><button>Edit</button></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Malik Khalid</td>
-                    <td>20210320</td>
-                    <td><button>Edit</button></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Adham Tarek</td>
-                    <td>20210051</td>
-                    <td><button>Edit</button></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Ammar Ayman</td>
-                    <td>20210253</td>
-                    <td><button>Edit</button></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Ismail Magdy</td>
-                    <td>20210069</td>
-                    <td><button>Edit</button></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Youssef Alaa</td>
-                    <td>20210478</td>
-                    <td><button>Edit</button></td>
-                </tr>
-                </body>
-        </div>
-    </section>
+</section>
+<form class="data">
+    <!-- I made const value right now but the value will be the student's data who we selected -->
+    <!--first name input-->
+    <label for="first">First Name:*</label>
+    <input type="text" id="first" name="first" placeholder="Firstname" value="Malik" required>
+    <br>
+    <br>
+    <!--last name input-->
+    <label for="last">Last Name:*</label>
+    <input type="text" id="last" name="last" placeholder="Lastname" value="Khalid" required>
+    <br>
+    <br>
+
+    <!--gender input-->
+    <label for="gender">Gender:*</label>
+    <select id="gender" name="gender" required>
+        <option disabled selected>Select..</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <br>
+    <br>
+
+    <!--date input-->
+    <label for="date">Date of Birth:*</label>
+    <input type="date" id="date" name="date" value="2003-08-01" required>
+    <br>
+    <br>
+
+    <!--gpa input-->
+    <label for="gpa">GPA:*</label>
+    <input type="text" id="gpa" name="gpa" placeholder="GPA" value="3" required>
+    <br>
+    <br>
+
+    <!--department input-->
+    <label for="department">Department:*</label>
+    <select id="department" name="department" required>
+        <option disabled selected>Select..</option>
+        <option value="CS">CS</option>
+        <option value="AI">AI</option>
+        <option value="IS">IS</option>
+        <option value="IT">IT</option>
+        <option value="DS">DS</option>
+    </select>
+    <br>
+    <br>
+
+    <!--level input-->
+    <label for="level">Level:*</label>
+    <select id="level" name="level" required>
+        <option disabled selected>Select..</option>
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+        <option value="four">4</option>
+    </select>
+    <br>
+    <br>
+
+    <!--id input-->
+    <label for="id">ID:*</label>
+    <input type="text" id="id" name="id" placeholder="ex: 20210051" value="20210320" required>
+    <br>
+    <br>
+
+
+
+    <!--phone number input-->
+    <label for="phone">Phone Number:*</label>
+    <input type="text" id="phone" name="phone" placeholder="ex: 01128604011" value="01129638354" required>
+    <br>
+    <br>
+
+    <!--email input-->
+    <label for="email">Email:*</label>
+    <input type="email" id="email" name="email" placeholder="ex: domatarek2003@gmail.com"
+           value="kmalk1749@gmail.come" required>
+    <br>
+    <br>
+
+    <!--status input-->
+    <label for="Students status">Student Status*</label>
+    <select id="Students status" name="status" required>
+        <option disabled selected>Select..</option>
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+    </select>
+    <br>
+    <br>
+    <!--submit button-->
+    <input type="submit" value="Update">
+    <!-- delete button this is reset don't delete the student just clear the form -->
+    <input type="reset" value="Delete">
+    <br>
     <hr>
-    <select>
-    <form>
-        <!-- I made const value right now but the value will be the student's data who we selected -->
-        <!--first name input-->
-        <label for="first">First Name:*</label>
-        <input type="text" id="first" name="first" placeholder="Firstname" value="Malik" required>
-        <br>
-        <br>
-        <!--last name input-->
-        <label for="last">Last Name:*</label>
-        <input type="text" id="last" name="last" placeholder="Lastname" value="Khalid" required>
-        <br>
-        <br>
-
-        <!--gender input-->
-        <label for="gender">Gender:*</label>
-        <select id="gender" name="gender" required>
-            <option disabled selected>Select..</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select>
-        <br>
-        <br>
-
-        <!--date input-->
-        <label for="date">Date of Birth:*</label>
-        <input type="date" id="date" name="date" value="2003-08-01" required>
-        <br>
-        <br>
-
-        <!--gpa input-->
-        <label for="gpa">GPA:*</label>
-        <input type="text" id="gpa" name="gpa" placeholder="GPA" value="3" required>
-        <br>
-        <br>
-
-        <!--department input-->
-        <label for="department">Department:*</label>
-        <select id="department" name="department" required>
-            <option disabled selected>Select..</option>
-            <option value="CS">CS</option>
-            <option value="AI">AI</option>
-            <option value="IS">IS</option>
-            <option value="IT">IT</option>
-            <option value="DS">DS</option>
-        </select>
-        <br>
-        <br>
-
-        <!--level input-->
-        <label for="level">Level:*</label>
-        <select id="level" name="level" required>
-            <option disabled selected>Select..</option>
-            <option value="one">1</option>
-            <option value="two">2</option>
-            <option value="three">3</option>
-            <option value="four">4</option>
-        </select>
-        <br>
-        <br>
-
-        <!--id input-->
-        <label for="id">ID:*</label>
-        <input type="text" id="id" name="id" placeholder="ex: 20210051" value="20210320" required>
-        <br>
-        <br>
-
-        <!--status input-->
-        <label for="status">Status:*</label>
-        <select id="status" name="status" required>
-            <option disabled selected>Select..</option>
-            <option value="enrolled">Enrolled in</option>
-            <option value="exiting">Exiting</option>
-            <option value="re-entering">Re-entering</option>
-        </select>
-        <br>
-        <br>
-
-        <!--phone number input-->
-        <label for="phone">Phone Number:*</label>
-        <input type="text" id="phone" name="phone" placeholder="ex: 01128604011" value="01129638354" required>
-        <br>
-        <br>
-
-        <!--email input-->
-        <label for="email">Email:*</label>
-        <input type="email" id="email" name="email" placeholder="ex: domatarek2003@gmail.com"
-            value="kmalk1749@gmail.come" required>
-        <br>
-        <br>
-
-        <!--submit button-->
-        <input type="submit" value="Update">
-        <!-- delete button this is reset don't delete the student just clear the form -->
-        <input type="reset" value="Delete">
-        <br>
-        <hr>
-    </form>
-    </section>
+</form>
 </body>
 
 </html>
