@@ -1,0 +1,14 @@
+.head a:link{
+    opacity: 0.8;
+}
+
+/* .info{
+    background-image: url("assets/info_bg.png");
+} */
+.title{
+    font-size: 2.5vw;
+    color: black;
+    text-align: left;
+    padding-top: 10%;
+    margin-bottom: 5%;
+}

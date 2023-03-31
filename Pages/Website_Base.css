@@ -1,0 +1,66 @@
+*{
+    font-family: 'Arial';
+    font-weight: bold;
+}
+
+body{
+    background-color: #fff;
+    background-image: url("assets/bg.jpg");
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.head{
+    color: white;
+    float: left;
+    font-size:2vw;
+    padding-left: 2vw;
+    margin-top: 1%;
+    letter-spacing: 5px;
+}
+
+.head a:link{
+    color: white;
+    text-decoration: none;
+}
+
+.head a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.head a:hover{
+    color: white;
+    opacity: 0.8;
+}
+
+.navigation{
+    float : right;
+    padding-right: 1%;
+}
+
+.navigation li{
+    margin-top: 0%;
+    font-size: 1.7vw;
+    display: inline-block;
+    width: auto;
+    list-style: outside none none;
+    padding-right: 2vw;
+}
+
+.navigation li a:link{
+    color: white;
+    text-decoration: none;
+}
+
+.navigation li a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.navigation li a:hover{
+    color: white;
+    opacity: 0.8;
+}
