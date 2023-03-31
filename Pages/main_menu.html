@@ -2,26 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Official Site For FCAI-CU Students Affairs">
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Menu</title>
+    <link rel="stylesheet" href="Website_Base.css">
 </head>
+<nav class = "navbar">
+    <a href = "info.html" class = "logo">FCAI-CU</a></h3>
+    <div class="nav-links">
+        <ul>
+            <li><a href="main_menu.html">Home</a></li>
+            <li><a href="add_student.html">Add student</a></li>
+            <li><a href="assign_department.html">Assign Department</a></li>
+            <li><a href="Update.html">Update data</a></li>
+            <li><a href="Student_list.html">Students List</a></li>
 
+        </ul>
+    </div>
+    <img src="assets/menu-btn.png" alt="menu hamburger" class = "menu-btn">
+</nav>
 <body>
-<header>
-<!--Name of the college on the left-->
-    <h3 class="head"><a href="info.html">FCAI-CU</a></h3>
-
-<!--links to the other pages - (links' paths to other pages will be updated when finished) - their positions will be done in CSS-->
-    <ul>
-        <li><a href="main_menu.html">Home</a></li>
-        <li><a href="add_student.html">Add student</a></li>
-        <li><a href="assign_department.html">Assign Department</a></li>
-        <li><a href="Update.html">Update data</a></li>
-        <li><a href="Student_list.html">Students List</a></li>
-
-    </ul>
-</header>
 
 <!--content of the main menu-->
 <section>
@@ -40,5 +40,11 @@
     </aside>
 </section>
 </body>
-
+<script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('mobile-menu');
+    });
+</script>
 </html>
