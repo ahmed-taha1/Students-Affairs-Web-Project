@@ -1,0 +1,18 @@
+section{
+    padding-top: 300px;
+}
+.above-text{
+    font-size: 45px;
+    color: #29346d;
+}
+.below-text{
+    font-size: 30px;
+    color: #29346d;
+}
+.right-arrow{
+    font-size: 40px;
+    color: rgb(225,62,101);
+}
+.next-link{
+    color: rgb(225,62,101);
+}
