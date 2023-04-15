@@ -47,3 +47,7 @@ input{
 .submit{
     color: #29346d;
 }
+
+input:hover,submit:hover,select:hover{
+    cursor: pointer;
+}
