@@ -1,0 +1,53 @@
+aside{
+    width: 40%;
+    height: 20%;
+    margin-left: 5%;
+    padding-top: 10%;
+}
+.student-data{
+    color: white;
+    text-align: left;
+    border-radius: 20px;
+    padding: 18px;
+    background-image: url('../assets/table-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/*.input{
+    display: inline-block;
+    margin-left: 5%;
+    padding: 10px;
+}*/
+.input{
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+    margin-left: 10%;
+    padding: 10px;
+}
+
+label{
+    display: block;
+}
+
+select{
+    width: 175px;
+    border-radius: 20px;
+    padding: 10px;
+}
+input{
+    width: 150px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.submit{
+    color: #29346d;
+}
+
+input:hover,submit:hover,select:hover{
+    cursor: pointer;
+}
