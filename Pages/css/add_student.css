@@ -44,8 +44,13 @@ input{
     border-radius: 20px;
     padding: 10px;
 }
-.submit{
-    color: #29346d;
+.submit > input{
+    font-size: large;
+    border-radius: 20px;
+    text-align: center;
+    height: 40px;
+    color: white;
+    background: #23239f;
 }
 
 input:hover,submit:hover,select:hover{
