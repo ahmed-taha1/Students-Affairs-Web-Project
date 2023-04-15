@@ -38,8 +38,12 @@ label{
     display: block;
 }
 
-select,
-input {
+select{
+    width: 150px;
+    border-radius: 20px;
+    padding: 10px;
+}
+input{
     width: 150px;
     border-radius: 20px;
     padding: 10px;
