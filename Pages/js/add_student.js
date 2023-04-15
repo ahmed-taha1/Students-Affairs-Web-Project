@@ -1,4 +1,8 @@
 let form = document.querySelector('.student-data');
+let genders = ["male","female"];
+let departments = ["AI","CS","IS","IT","DS"];
+let levels = [1,2,3,4];
+let statuses = ["Enrolled in","Exiting","Re-entering"];
 
 /**
  * Input boxes
@@ -19,10 +23,7 @@ let statusBox = document.querySelector('#status');
 
 
 function displayError(inputBox){
-    let selector = "#";
-    selector+=inputBox.id;
-    selector += "-error";
-    let errorBox = document.querySelector(selector);
+    let errorBox = document.querySelector(`#${inputBox.id}-error`);
     console.log(errorBox);
     errorBox.classList.remove("hide");
 }
@@ -54,6 +55,20 @@ function isValidID(id){
     return regex.test(id);
 }
 
+function isValidGender(gender){
+    return genders.includes(gender);
+}
+function isValidDepartment(department){
+    return departments.includes(department);
+}
+
+function isValidLevel(level){
+    return levels.includes(level);
+}
+
+function isValidStatus(status){
+    return statuses.includes(status);
+}
 
 /**
  * Validation on Submitting student form
@@ -82,6 +97,22 @@ form.addEventListener('submit',(event)=>{
     }
     if(!isValidEmail(emailBox.value)){
         displayError(emailBox);
+        event.preventDefault();
+    }
+    if(!isValidGender(genderBox.value)){
+        displayError(genderBox);
+        event.preventDefault();
+    }
+    if(!isValidDepartment(departmentBox.value)){
+        displayError(departmentBox);
+        event.preventDefault();
+    }
+    if(!isValidLevel(levelBox.value)){
+        displayError(levelBox);
+        event.preventDefault();
+    }
+    if(!isValidStatus(statusBox.status)){
+        displayError(statusBox);
         event.preventDefault();
     }
 })
