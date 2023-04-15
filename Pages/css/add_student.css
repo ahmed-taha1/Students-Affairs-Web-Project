@@ -56,3 +56,16 @@ input{
 input:hover,submit:hover,select:hover{
     cursor: pointer;
 }
+
+.hide{
+    display: none;
+}
+
+.error-msg{
+    margin-left: 5px;
+    color: red;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
