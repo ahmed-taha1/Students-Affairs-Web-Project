@@ -53,6 +53,10 @@ body{
     display: none;
 }
 
+.navbar a:hover{
+    opacity: 0.8;
+}
+
 @media screen and (max-width: 900px) {
     .navbar{
         padding: 0px;
