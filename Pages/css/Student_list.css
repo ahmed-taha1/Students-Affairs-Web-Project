@@ -31,7 +31,6 @@ a {
 
 
 
-
 /* Style table headers */
 th {
   font-weight: bold;
@@ -142,9 +141,6 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-
-
-
 
 .table_data {
   background-image: url('../assets/table-bg.png');
