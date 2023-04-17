@@ -63,11 +63,15 @@ table {
   font-size: 18px;
 }
 
+table select {
+  border-radius: 20px;
+}
 
 tr:nth-child(even) {
   background-color: #ECECEC;
   border-bottom: 1px solid black;
 }
+
 
 th,
 td {
