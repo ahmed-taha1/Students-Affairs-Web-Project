@@ -10,7 +10,7 @@
 });
 
 
-    <!-- hidden the student form -->
+    /* hidden the student form */
     const exitBtn = document.getElementById('exit');
     const studentInfoDiv = document.querySelector('.student_info');
 

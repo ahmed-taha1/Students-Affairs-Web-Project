@@ -63,6 +63,7 @@ table {
   font-size: 18px;
 }
 
+
 tr:nth-child(even) {
   background-color: #ECECEC;
   border-bottom: 1px solid black;
@@ -70,9 +71,17 @@ tr:nth-child(even) {
 
 th,
 td {
-  border: 1px solid #000000;
+  border-left: none; 
+  border-right: none;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
   padding: 20px;
   width: 200px;
+}
+
+th {
+  text-align: left;
+  padding: 20px;
 }
 
 .save-button {
