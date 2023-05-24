@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,24 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Student</title>
-    <link rel="stylesheet" href="../Web_Project/static/css/Website_Base.css">
-    <link rel="stylesheet" href="../Web_Project/static/css/add_student.css">
-
+    <link rel="stylesheet" href="{% static 'css/add_student.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Website_Base.css' %}">
 </head>
 
 <nav class = "navbar">
-    <a href = "info.html" class = "logo">FCAI-CU</a></h3>
+    <a href = "{% url 'info' %}" class = "logo">FCAI-CU</a></h3>
     <div class="nav-links">
         <ul>
-            <li><a href="main_menu.html">Home</a></li>
-            <li style="opacity:0.8;"><a href="add_student.html">Add student</a></li>
-            <li><a href="assign_department.html">Assign Department</a></li>
-            <li><a href="Update.html">Update data</a></li>
-            <li><a href="Student_list.html">Students List</a></li>
+            <li><a href="{% url 'homePage' %}">Home</a></li>
+            <li><a href="{% url 'registration' %}">Add student</a></li>
+            <li><a href="{% url 'departmentAssignment' %}">Assign Department</a></li>
+            <li><a href="{% url 'updateData' %}">Update data</a></li>
+            <li><a href="{% url 'studentsList' %}">Students List</a></li>
 
         </ul>
     </div>
-    <img src="../Web_Project/static/assets/menu-btn.png" alt="menu hamburger" class = "menu-btn">
+    <img src="{% static 'assets/menu-btn.png' %}" alt="menu hamburger" class = "menu-btn">
 </nav>
 
 <body>
@@ -30,8 +30,8 @@
     <!--content of the page-->
     <section>
         <aside>
-            <form class="student-data">
-
+            <form class="student-data" method="POST">
+                {% csrf_token %}
             <!--first name input-->
               <div class="input">
                   <label for="first">First Name:*<span id="first-error" class="error-msg hide">Invalid!</span></label>
@@ -134,6 +134,6 @@
             navLinks.classList.toggle('mobile-menu');
         });
     </script>
-    <script src="../Web_Project/static/js/add_student.js"></script>
+    <script src="{% static 'js/add_student.js' %}"></script>
 </body>
 </html>

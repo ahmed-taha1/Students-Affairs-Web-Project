@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -5,24 +6,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update</title>
-    <link rel="stylesheet" href="../Web_Project/static/css/Update.css">
-    <link rel="stylesheet" href="../Web_Project/static/css/Website_Base.css">
-
+    <title>Add Student</title>
+    <link rel="stylesheet" href="{% static 'css/Update.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Website_Base.css' %}">
 </head>
-<nav class ="navbar">
-    <a href = "info.html" class = "logo">FCAI-CU</a>
+<nav class = "navbar">
+    <a href = "{% url 'info' %}" class = "logo">FCAI-CU</a></h3>
     <div class="nav-links">
         <ul>
-            <li><a href="main_menu.html">Home</a></li>
-            <li><a href="add_student.html">Add student</a></li>
-            <li><a href="assign_department.html">Assign Department</a></li>
-            <li style="opacity:0.8;"><a href="Update.html">Update data</a></li>
-            <li><a href="Student_list.html">Students List</a></li>
+            <li><a href="{% url 'homePage' %}">Home</a></li>
+            <li><a href="{% url 'registration' %}">Add student</a></li>
+            <li><a href="{% url 'departmentAssignment' %}">Assign Department</a></li>
+            <li><a href="{% url 'updateData' %}">Update data</a></li>
+            <li><a href="{% url 'studentsList' %}">Students List</a></li>
 
         </ul>
     </div>
-    <img src="img/menu-btn.png" alt="menu hamburger" class = "menu-btn">
+    <img src="{% static 'assets/menu-btn.png' %}" alt="menu hamburger" class = "menu-btn">
 </nav>
 
 <body>
@@ -321,6 +321,6 @@
     });
 </script>
 
-<script src="../Web_Project/static/js/Update.js"></script>
+<script src="{% static 'js/Update.js' %}"></script>
 
 </html>

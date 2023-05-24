@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     
@@ -5,9 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>who are us</title>
-    <link rel="stylesheet" href="../Web_Project/static/css/Website_Base.css">
-    <link rel="stylesheet" href="../Web_Project/static/css/info.css">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="{% static 'css/info.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Website_Base.css' %}">
 </head>
 
 <body>
@@ -15,19 +16,19 @@
 <!--Name of the college on the left-->
 <!--links to the other pages - (links' paths to other pages will be updated when finished) - their positions will be done in CSS-->
     <nav class = "navbar">
-        <a href = "info.html" class = "logo">FCAI-CU</a></h3>
-        <div class="nav-links">
-            <ul>
-                <li><a href="main_menu.html">Home</a></li>
-                <li><a href="add_student.html">Add student</a></li>
-                <li><a href="assign_department.html">Assign Department</a></li>
-                <li><a href="Update.html">Update data</a></li>
-                <li><a href="Student_list.html">Students List</a></li>
+    <a href = "{% url 'info' %}" class = "logo">FCAI-CU</a></h3>
+    <div class="nav-links">
+        <ul>
+            <li><a href="{% url 'homePage' %}">Home</a></li>
+            <li><a href="{% url 'registration' %}">Add student</a></li>
+            <li><a href="{% url 'departmentAssignment' %}">Assign Department</a></li>
+            <li><a href="{% url 'updateData' %}">Update data</a></li>
+            <li><a href="{% url 'studentsList' %}">Students List</a></li>
 
-            </ul>
-        </div>
-        <img src="../Web_Project/static/assets/menu-btn.png" alt="menu hamburger" class = "menu-btn">
-    </nav>
+        </ul>
+    </div>
+    <img src="{% static 'assets/menu-btn.png' %}" alt="menu hamburger" class = "menu-btn">
+</nav>
 
 <!-- content -->
     <div class="info">
