@@ -20,5 +20,5 @@ import BusinessLogic
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(BusinessLogic.urls)),
+    path('', include('BusinessLogic.urls')),
 ]
