@@ -10,7 +10,7 @@ def homePage(request):
         return render(request, 'main_menu.html')
 
 
-def registration(request):
+def registrationPage(request):
     if request.method == 'GET':
         return render(request, 'add_student.html')
     elif request.method == 'POST':
@@ -40,22 +40,22 @@ def registration(request):
             return render(request, 'add_student.html')
 
 
-def departmentAssignment(request):
+def departmentAssignmentPage(request):
     if request.method == 'GET':
         return render(request, 'assign_department.html')
 
 
-def updateData(request):
+def updateStudentPage(request):
     if request.method == 'GET':
         return render(request, 'Update.html')
 
 
-def studentsList(request):
+def studentsListPage(request):
     if request.method == 'GET':
         return render(request, 'Student_list.html')
 
 
-def info(request):
+def infoPage(request):
     if request.method == 'GET':
         return render(request, 'info.html')
 
