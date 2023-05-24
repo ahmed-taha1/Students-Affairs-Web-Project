@@ -27,6 +27,12 @@ def registration(request):
             student.email = request.POST["email"]
             student.status = request.POST["status"]
             student.phone = request.POST["phone"]
+            if Student.objects.filter(id=student.id).exists():
+                raise ValueError("This Id Already Exists")
+            if Student.objects.filter(email=student.email).exists():
+                raise ValueError("This Email Already Exists")
+            if Student.objects.filter(phone=student.phone).exists():
+                raise ValueError("This Phone Already Exists")
             student.save()
         except Exception as exception:
             print("Registration Exception " + exception.args[0])
