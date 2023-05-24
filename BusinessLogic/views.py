@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Student
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -11,6 +13,33 @@ def homePage(request):
 def registration(request):
     if request.method == 'GET':
         return render(request, 'add_student.html')
+    elif request.method == 'POST':
+        try:
+            student = Student()
+            student.id = int(request.POST["id"])
+            student.firstName = request.POST["first"]
+            student.lastName = request.POST["last"]
+            student.gender = request.POST["gender"]
+            student.dateOfBirth = request.POST["date"]
+            student.level = int(request.POST["level"])
+            student.gpa = request.POST["gpa"]
+            student.department = request.POST["department"]
+            student.email = request.POST["email"]
+            student.status = request.POST["status"]
+            student.phone = request.POST["phone"]
+            student.save()
+            print(student.id)
+            print(student.firstName)
+            print(student.lastName)
+            print(student.level)
+            print(student.department)
+            print(student.email)
+            print(student.status)
+            return HttpResponse("ADDED")
+        except Exception as exception:
+            print("Registration Exception " + exception.args[0])
+            return HttpResponse("FAIL")
+
 
 
 def departmentAssignment(request):

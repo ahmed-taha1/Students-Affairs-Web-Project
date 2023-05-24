@@ -83,7 +83,7 @@ function isValidLastName(){
 }
 function isValidGPA(){
     let gpa = boxes["gpa"].value;
-    return gpa > 0.0 && gpa < 4.0;
+    return gpa > 0.0 && gpa <= 4.0;
 }
 
 function isValidEmail(){
