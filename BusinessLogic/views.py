@@ -1,7 +1,7 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 from .models import Student
-from django.http import HttpResponse
-
+from django.core import serializers
 # Create your views here.
 
 
@@ -60,3 +60,22 @@ def infoPage(request):
         return render(request, 'info.html')
 
 
+def getStudents(request):
+    studentList = {}
+    students = Student.objects.all()
+    for student in students:
+        studentData = {
+            "firstName": student.firstName,
+            "lastName": student.lastName,
+            "gender": student.gender,
+            "dateOfBirth": student.dateOfBirth,
+            "level": student.level,
+            "gpa": student.gpa,
+            "department": student.department,
+            "email": student.email,
+            "status": student.status,
+            "phone": student.phone,
+        }
+        studentList[str(student.id)] = studentData
+    print(studentList)
+    return JsonResponse(studentList)

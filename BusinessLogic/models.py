@@ -7,6 +7,7 @@ class Student(models.Model):
     id = models.IntegerField(primary_key=True)
     firstName = models.CharField(max_length=20, null=False)
     lastName = models.CharField(max_length=20, null=False)
+    gender = models.CharField(max_length=10, null=False)
     dateOfBirth = models.DateField(null=False, default=datetime(2003, 1, 1))
     gpa = models.DecimalField(max_digits=3, decimal_places=2, null=False)
     department = models.CharField(max_length=12, null=False)
