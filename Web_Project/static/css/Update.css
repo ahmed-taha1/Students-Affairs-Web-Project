@@ -9,6 +9,21 @@ div.tbl{
     border-radius: 20px;
 
 }
+
+
+.hide{
+    display: none;
+}
+
+.error-msg{
+    margin-left: 5px;
+    color: red;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .tbl > table{
     margin: 10px 10px 10px 10px;
     width: 98%;
@@ -132,6 +147,8 @@ section{
 .student_info.hidden{
     display: none;
 }
+
+
 
 #exit{
     width: 20px;

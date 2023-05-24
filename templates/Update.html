@@ -25,6 +25,7 @@
     <img src="{% static 'assets/menu-btn.png' %}" alt="menu hamburger" class = "menu-btn">
 </nav>
 
+
 <body>
 <hr>
 <section>
@@ -185,7 +186,7 @@
         <!-- I made const value right now but the value will be the student's data who we selected -->
         <!--first name input-->
         <div class="fn">
-            <label for="first">First Name:*</label>
+            <label for="first">First Name:*<span id="first-error" class="error-msg hide">Invalid!</span></label>
             <br>
             <input type="text" id="first" name="first" placeholder="Firstname" value="Malik" required>
         </div>
@@ -193,7 +194,7 @@
         <br>
         <!--last name input-->
         <div class="ln">
-            <label for="last">Last Name:*</label>
+            <label for="last">Last Name:*<span id="last-error" class="error-msg  hide">Invalid!</span></label>
             <br>
             <input type="text" id="last" name="last" placeholder="Lastname" value="Khalid" required>
         </div>
@@ -202,7 +203,7 @@
 
         <!--gender input-->
         <div class="g">
-            <label for="gender">Gender:*</label>
+            <label for="gender">Gender:*<span id="gender-error" class="error-msg  hide">Invalid!</span></label>
             <br>
             <select id="gender" name="gender" required>
                 <option disabled selected>Select..</option>
@@ -215,7 +216,7 @@
 
         <!--date input-->
         <div class="dof">
-            <label for="date">Date of Birth:*</label>
+            <label for="date">Date of Birth:*<span id="date-error"  class="error-msg  hide">Invalid!</span></label>
             <br>
             <input type="date" id="date" name="date" value="2003-08-01" required>
         </div>
@@ -224,7 +225,7 @@
 
         <!--gpa input-->
         <div class="GPA">
-            <label for="gpa">GPA:*</label>
+            <label for="gpa">GPA:*<span id="gpa-error" class="error-msg hide">Invalid!</span></label>
             <br>
             <input type="text" id="gpa" name="gpa" placeholder="GPA" value="3" required>
         </div>
@@ -233,7 +234,7 @@
 
         <!--department input-->
         <div class="dep">
-            <label for="department">Department:*</label>
+            <label for="department">Department:*<span id="department-error"  class="error-msg hide">Invalid!</span></label>
             <br>
             <select id="department" name="department" required>
                 <option disabled selected>Select..</option>
@@ -249,7 +250,7 @@
 
         <!--level input-->
         <div class="lev">
-            <label for="level">Level:*</label>
+            <label for="level">Level:*<span id="level-error" class="error-msg hide">Invalid!</span></label>
             <br>
             <select id="level" name="level" required>
                 <option disabled selected>Select..</option>
@@ -264,7 +265,7 @@
 
         <!--id input-->
         <div class="ID">
-            <label for="id">ID:*</label>
+            <label for="id">ID:*<span id="id-error" class="error-msg hide">Invalid!</span></label>
             <br>
             <input type="text" id="id" name="id" placeholder="ex: 20210051" value="20210320" required>
         </div>
@@ -273,7 +274,7 @@
 
         <!--phone number input-->
         <div class="PH">
-            <label for="phone">Phone Number:*</label>
+            <label for="phone">Phone Number:*<span id="phone-error" class="error-msg  hide">Invalid!</span></label>
             <br>
             <input type="text" id="phone" name="phone" placeholder="ex: 01128604011" value="01129638354" required>
         </div>
@@ -282,7 +283,7 @@
 
         <!--email input-->
         <div class="eml">
-            <label for="email">Email:*</label>
+            <label for="email">Email:*<span id="email-error" class="error-msg email hide">Invalid!</span></label>
             <br>
             <input type="email" id="email" name="email" placeholder="ex: domatarek2003@gmail.com"
                    value="kmalk1749@gmail.come" required>
@@ -292,9 +293,9 @@
 
         <!--status input-->
         <div class="SS">
-            <label for="Students status">Student Status*</label>
+            <label for="status">Status*<span id="status-error" class="error-msg  hide">Invalid!</span></label>
             <br>
-            <select id="Students status" name="status" required>
+            <select id="status" name="status" required>
                 <option disabled selected>Select..</option>
                 <option value="Active">Active</option>
                 <option value="Inactive">Inactive</option>
@@ -312,8 +313,7 @@
         </div>
     </form>
 </div>
-</body>
-<script>
+</body><script>
     const menuBtn = document.querySelector('.menu-btn');
     const navLinks = document.querySelector('.nav-links');
     menuBtn.addEventListener('click', () => {
