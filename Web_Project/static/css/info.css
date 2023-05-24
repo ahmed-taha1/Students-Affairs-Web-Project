@@ -1,0 +1,34 @@
+.logo{
+    opacity: 0.8;
+}
+
+.info{
+    background-image: url("../assets/info.png");
+    background-repeat: no-repeat;
+    background-size:700px;
+    background-position: left;
+    background-position: 50px;
+    background-position-y: 130px;
+    height: 800px;
+}
+
+.title{
+    font-size: 2.5vw;
+    color: black;
+    padding-top: 200px;
+    padding-left: 5.5%;
+    margin-bottom: 2%;
+}
+
+.names{
+    margin-left:0 auto;
+    width: 780px;
+}
+
+.paragraph{
+    font-size: 2vw;
+    color: black;
+    text-align: center;
+    line-height: 70px;
+}
+

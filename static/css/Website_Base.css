@@ -1,0 +1,104 @@
+*{
+    font-family: 'Montserrat', 'Arial';
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../assets/bg.jpg");
+    background-size: cover;
+}
+
+.navbar{
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.navbar a{
+    color: white;
+}
+
+.navbar .logo{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.mobile-menu{
+    margin-left: 0;
+}
+
+.navbar .nav-links ul{
+    display: flex;
+}
+
+.navbar .nav-links ul li{
+    margin: 0 15px;
+}
+
+.navbar .menu-btn{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 30px;
+    display: none;
+}
+
+.navbar a:hover{
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar{
+        padding: 0px;
+    }
+
+    .navbar .menu-btn{
+        display: block;
+    }
+
+    .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(71, 67, 67, 0.43);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    } 
+
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .logo{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+
+    .navbar .nav-links ul li{
+        margin: 25px 0;
+        font-size: 1.2em;
+    } 
+}

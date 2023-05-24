@@ -1,0 +1,110 @@
+.search {
+  position: absolute;
+  top: 5%;
+  justify-content: left;
+  align-items: center;
+  margin: 60px;
+}
+
+label {
+  display: none;
+}
+
+input[type="search"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  width: 120px;
+  margin-right: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #840ad6;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #680580;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.table-border {
+  border-radius: 20px;
+  padding: 30px 30px;
+  background-image: url('../assets/table-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 5%;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #fcfcfc;
+  display: inline-block;
+  font-size: 18px;
+}
+
+table select {
+  border-radius: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #ECECEC;
+  border-bottom: 1px solid black;
+}
+
+
+th,
+td {
+  border-left: none; 
+  border-right: none;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  padding: 20px;
+  width: 200px;
+}
+
+th {
+  text-align: left;
+  padding: 20px;
+}
+
+.save-button {
+  background-color: #840ad6; 
+  border: none; 
+  color: white; 
+  padding: 10px 20px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+}
+
+.save-button:hover {
+  background-color: #680580; 
+}

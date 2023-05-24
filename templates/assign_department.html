@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="../Web_Project/static/css/Website_Base.css">
+    <link rel="stylesheet" href="../Web_Project/static/css/assign_department.css">
+</head>
+    <nav class = "navbar">
+        <a href = "info.html" class = "logo">FCAI-CU</a></h3>
+        <div class="nav-links">
+            <ul>
+                <li><a href="main_menu.html">Home</a></li>
+                <li><a href="add_student.html">Add student</a></li>
+                <li style="opacity:0.8;"><a href="assign_department.html">Assign Department</a></li>
+                <li><a href="Update.html">Update data</a></li>
+                <li><a href="Student_list.html">Students List</a></li>
+
+            </ul>
+        </div>
+        <img src="../Web_Project/static/assets/menu-btn.png" alt="menu hamburger" class = "menu-btn">
+    </nav>
+<body>
+  <section>
+    <aside>
+      <div class="search">
+        <label for="search"></label>
+        <input id="search" type="search" name="id" placeholder="ex:20210069" formmethod="get" required>
+        <input type="submit" formmethod="get">
+      </div>
+      <div class="table-container"> 
+        <div class="table-wrapper">
+          <div class="table-border">
+              <table border="2" style="width: 100%;">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>ID</th>
+                  <th>Level</th>
+                  <th>Department</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Ahmed Mohamed</td>
+                  <td>20210033</td>
+                  <td>3</td>
+                  <td>
+                    <select name="department" required>
+                      <option disabled selected>Select..</option>
+                      <option disabled>General</option>
+                      <option selected>CS</option>
+                      <option>AI</option>
+                      <option>IS</option>
+                      <option>IT</option>
+                      <option>DS</option>
+                  </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Adham Tarek</td>
+                  <td>20210478</td>
+                  <td>1</td>
+                  <td>
+                    <select name="department" disabled required>
+                      <option disabled selected>Select..</option>
+                      <option selected>General</option>
+                  </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Ismail Magdy</td>
+                  <td>20210069</td>
+                  <td>4</td>
+                  <td>
+                    <select name="department" required>
+                      <option disabled >Select..</option>
+                      <option disabled>General</option>
+                      <option selected>CS</option>
+                      <option>AI</option>
+                      <option>IS</option>
+                      <option>IT</option>
+                      <option>DS</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Ammar Ayman</td>
+                  <td>20210253</td>
+                  <td>3</td>
+                  <td>
+                    <select name="department" required>
+                      <option disabled selected>Select..</option>
+                      <option disabled>General</option>
+                      <option>CS</option>
+                      <option>AI</option>
+                      <option>IS</option>
+                      <option>IT</option>
+                      <option>DS</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Malek Khaled</td>
+                  <td>20210320</td>
+                  <td>3</td>
+                  <td>
+                    <select name="department" required>
+                      <option disabled selected>Select..</option>
+                      <option disabled>General</option>
+                      <option>CS</option>
+                      <option>AI</option>
+                      <option>IS</option>
+                      <option>IT</option>
+                      <option>DS</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Yousef Alaa</td>
+                  <td>20210478</td>
+                  <td>3</td>
+                  <td>
+                    <select name="department" required>
+                      <option disabled>Select..</option>
+                      <option disabled>General</option>
+                      <option>CS</option>
+                      <option>AI</option>
+                      <option>IS</option>
+                      <option selected>IT</option>
+                      <option>DS</option>
+                    </select>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+      </div>
+    </div>
+  </div>
+  <button class="save-button">Save</button>
+    </aside>
+  </section>
+</body>
+
+<script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('mobile-menu');
+    });
+</script>
+</html>

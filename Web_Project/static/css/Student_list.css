@@ -1,0 +1,171 @@
+.table {
+  font-size: 14px;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+h2,
+h3,
+a {
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+/* Style table headers */
+th {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  color: black;
+  font-size: 20px;
+}
+
+/* Style table rows */
+tr {
+  background-color: #fff;
+  border-bottom: 1px solid black;
+}
+
+/* Style alternate rows */
+tr:nth-child(even) {
+  background-color: #ECECEC;
+  border-bottom: 1px solid black;
+}
+
+/* Style table data cells */
+td {
+  text-align: center;
+  padding: 10px;
+
+}
+
+.table-container {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Style table border */
+table {
+
+  border-radius: 10px;
+  /* border-radius: 10px ; */
+
+  /* border-collapse: collapse; */
+}
+
+.table-border {
+  border-radius: 20px;
+  padding: 18px;
+  background-image: url('../assets/table-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  margin-top: 30px;
+  margin-bottom: 10px
+}
+
+.search-form form {
+  display: inline-block;
+}
+
+.search-form input {
+  border-radius: 50px;
+  height: 35px;
+  padding: 0 25px 0 10px;
+  border: 1px solid #7D1FAB;
+  background-image: url('../assets/search_icon.jpg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+
+}
+
+.search-form input:focus {
+  outline: none;
+  border-color: #7D1FAB;
+}
+
+.search-form button {
+  display: none;
+}
+
+
+/* .table_wrapper {
+    margin-top: 30px;
+    width: 1300px;
+    increase the width
+    display: inline-block;
+    border-bottom: 10px solid #DE4C57;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-image: linear-gradient(#7D1FAB, #DE4C57) 10 stretch;
+    background: linear-gradient(to bottom, #7D1FAB, #DE4C57);
+  
+} */
+
+.table_wrapper table {
+
+  background-color: #ffffff;
+  margin: 0;
+  border-radius: 4px;
+  position: relative;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table_data {
+  background-image: url('../assets/table-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 10px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/*text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    border-top: 70px solid #791EAA;
+    border-bottom: 10px solid #DE4C57;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    */
