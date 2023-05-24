@@ -28,18 +28,10 @@ def registration(request):
             student.status = request.POST["status"]
             student.phone = request.POST["phone"]
             student.save()
-            print(student.id)
-            print(student.firstName)
-            print(student.lastName)
-            print(student.level)
-            print(student.department)
-            print(student.email)
-            print(student.status)
-            return HttpResponse("ADDED")
         except Exception as exception:
             print("Registration Exception " + exception.args[0])
-            return HttpResponse("FAIL")
-
+        finally:
+            return render(request, 'add_student.html')
 
 
 def departmentAssignment(request):
