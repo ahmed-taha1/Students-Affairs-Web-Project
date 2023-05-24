@@ -13,5 +13,6 @@ class Student(models.Model):
     email = models.CharField(max_length=25, default="N/A", unique=True)
     phone = models.CharField(max_length=12, null=False)
     status = models.CharField(max_length=10, null=False)
+
     def __str__(self):
         return self.firstName+self.lastName+f" {str(self.id)}"
