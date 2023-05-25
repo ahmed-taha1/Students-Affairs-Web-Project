@@ -1,9 +1,7 @@
 let form = document.querySelector('.student-data');
-let genders = ["male","female"];
-let departments = ["AI","CS","IS","IT","DS"];
-let levels = [1,2,3,4];
-let statuses = ["Enrolled in","Exiting","Re-entering"];
-
+let usedEmails = []
+let usedIDs = []
+let usedPhones = []
 /**
  *
  * BOX ID => BOX itself
@@ -18,9 +16,23 @@ let verifications = {};
 getInputBoxes();
 setUpBoxesVerification();
 setupBoxesActions();
+getStoredData();
 
 
-
+function getStoredData(){
+    usedEmails.length = 0;
+    usedPhones.length = 0;
+    usedIDs.length = 0;
+    let request = new XMLHttpRequest();
+    request.open("GET","http://127.0.0.1:8000/students/",false);
+    request.send();
+    let students = JSON.parse(request.responseText);
+    for (let id in students){
+        usedEmails.push(students[id]["email"]);
+        usedPhones.push(students[id]["phone"]);
+        usedIDs.push(id);
+    }
+}
 function getInputBoxes(){
     let inputBoxes = document.querySelectorAll('input');
     let selectBoxes = document.querySelectorAll('select');
@@ -59,8 +71,9 @@ function setupBoxesActions(){
         }
     }
 }
-function displayError(inputBox){
+function displayError(inputBox,msg = "Invalid!"){
     let errorBox = document.querySelector(`#${inputBox.id}-error`);
+    errorBox.textContent = msg;
     errorBox.classList.remove("hide");
 }
 function removeError(inputBox){
@@ -129,5 +142,17 @@ form.addEventListener('submit',(event)=>{
             displayError(boxes[boxID]);
             event.preventDefault();
         }
+    }
+    if(usedEmails.includes(boxes["email"].value)){
+        displayError(boxes["email"],"Email Used");
+        event.preventDefault();
+    }
+    if(usedIDs.includes(boxes["id"].value)){
+        displayError(boxes["id"],"ID Used");
+        event.preventDefault();
+    }
+    if(usedPhones.includes(boxes["phone"].value)){
+        displayError(boxes["phone"],"Phone Used");
+        event.preventDefault();
     }
 })
