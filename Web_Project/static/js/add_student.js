@@ -12,7 +12,6 @@ let boxes = {};
  * BoxID => Verification function
  */
 let verifications = {};
-
 getInputBoxes();
 setUpBoxesVerification();
 setupBoxesActions();

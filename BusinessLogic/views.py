@@ -77,5 +77,4 @@ def getStudents(request):
             "phone": student.phone,
         }
         studentList[str(student.id)] = studentData
-    print(studentList)
     return JsonResponse(studentList)
