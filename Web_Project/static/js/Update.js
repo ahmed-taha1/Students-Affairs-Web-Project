@@ -28,12 +28,39 @@ const tableBody = document.querySelector('.table_data tbody');
     button.addEventListener('click', (event) => {
         studentInfo.style.display = 'block';
         let id = event.target.id;
-       for (let boxID in boxes){
-            let box = boxes[boxID];
-            box.value = 'TEST';
-       }
+        console.log(id);
+        let boxes = {
+            "first": document.querySelector('#first'),
+            "last": document.querySelector('#last'),
+            "email": document.querySelector('#email'),
+            "phone": document.querySelector('#phone'),
+            "gpa": document.querySelector('#gpa'),
+            "id": document.querySelector('#id'),
+            "gender": document.querySelector('#gender'),
+            "department": document.querySelector('#department'),
+            "level": document.querySelector('#level'),
+            "status": document.querySelector('#status'),
+            "dateOfBirth": document.querySelector('#date'),
+        };
+        for (let student in students) {
+            if (student === id) {
+                boxes["first"].value = students[student]["firstName"];
+                boxes["last"].value = students[student]["lastName"];
+                boxes["email"].value = students[student]["email"];
+                boxes["phone"].value = students[student]["phone"];
+                boxes["gpa"].value = students[student]["gpa"];
+                boxes["id"].value = students[student]["id"];
+                boxes["gender"].value = students[student]["gender"];
+                boxes["department"].value = students[student]["department"];
+                boxes["level"].value = students[student]["level"];
+                boxes["status"].value = students[student]["status"];
+                boxes["dateOfBirth"].value = students[student]["dateOfBirth"];
+
+            }
+        }
     });
- });
+});
+
 
 
 
@@ -179,7 +206,7 @@ function fillTable() {
       const countCell = document.createElement('td');
       countCell.textContent = count.toString();
       const nameCell = document.createElement('td');
-      nameCell.innerHTML = students[id]["firstName"] + students[id]["lastName"];
+      nameCell.innerHTML = students[id]["name"];
       const idCell = document.createElement('td');
       idCell.textContent = id
       const statusCell = document.createElement('td');
@@ -195,8 +222,8 @@ function fillTable() {
       newRow.append(nameCell);
       newRow.append(idCell);
       newRow.append(statusCell);
+      newRow.append(buttonCell);
       tableBody.append(newRow);
-      tableBody.append(buttonCell);
       count++;
     }
 }

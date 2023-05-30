@@ -65,6 +65,8 @@ def getStudents(request):
     students = Student.objects.all()
     for student in students:
         studentData = {
+            "id": student.id,
+            "name": student.firstName + " " + student.lastName,
             "firstName": student.firstName,
             "lastName": student.lastName,
             "gender": student.gender,
