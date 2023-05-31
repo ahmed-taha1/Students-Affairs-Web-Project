@@ -61,6 +61,21 @@ table {
   background-color: #fcfcfc;
   display: inline-block;
   font-size: 18px;
+  overflow: auto;
+}
+
+table::-webkit-scrollbar{
+    width: 12px;
+
+}
+table::-webkit-scrollbar-track{
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px gray;
+
+}
+table::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background: #7D1FAB;
 }
 
 table select {
