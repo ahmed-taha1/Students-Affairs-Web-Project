@@ -1,3 +1,52 @@
+
+let students = [];
+getStudentsData();
+fillTable();
+
+function getStudentsData(){
+     let request = new XMLHttpRequest();
+     request.open("GET","http://127.0.0.1:8000/students/",false);
+     request.send();
+     students = JSON.parse(request.responseText);
+ }
+
+function fillTable() {
+    let tableBody = document.querySelector('tbody');
+    let count = 1;
+    for (let id in students){
+      const newRow = document.createElement('tr');
+      const countCell = document.createElement('td');
+      countCell.textContent = count.toString();
+      const nameCell = document.createElement('td');
+      nameCell.innerHTML = students[id]["name"];
+      console.log(students[id]["name"]);
+      const idCell = document.createElement('td');
+      idCell.textContent = id
+      const levelCell = document.createElement('td');
+      levelCell.textContent = students[id]["level"];
+      const departmentCell = document.createElement('td');
+      const departmentSelect = document.createElement('select');
+      departmentSelect.name = "department";
+      const department = ["CS", "AI", "IS", "IT", "DS"];
+      for (let i = 0; i < department.length; i++) {
+          const option = document.createElement('option');
+          option.value = department[i];
+          option.textContent = department[i];
+          if (students[id]["department"] === department[i]) {
+          option.selected = true;
+          }
+         departmentSelect.appendChild(option);
+      }
+      departmentCell.appendChild(departmentSelect);
+      newRow.append(countCell);
+      newRow.append(nameCell);
+      newRow.append(idCell);
+      newRow.append(levelCell);
+      newRow.append(departmentCell);
+      tableBody.append(newRow);
+      count++;
+    }
+}
 window.addEventListener('DOMContentLoaded', () => {
   const saveButton = document.querySelector('.save-button');
   const searchForm = document.getElementById('search-form');

@@ -1,8 +1,7 @@
- /* display student form */
 let students = [];
 let form = document.querySelector('.data');
 let boxes = {};
-let verifications = {}
+let verifications = {};
 
 getStudentsData();
 fillTable();
@@ -109,7 +108,6 @@ function setUpBoxesVerification(){
     verifications["email"] = isValidEmail;
     verifications["phone"] = isValidPhoneNumber;
     verifications["gpa"] = isValidGPA;
-    verifications["id"] = isValidID;
     verifications["gender"] = isValidGender;
     verifications["department"] = isValidDepartment;
     verifications["level"] = isValidLevel;
@@ -151,7 +149,7 @@ function isValidLastName(){
 }
 function isValidGPA(){
     let gpa = boxes["gpa"].value;
-    return gpa > 0.0 && gpa < 4.0;
+    return gpa > 0.0 && gpa <= 4.0;
 }
 
 function isValidEmail(){
@@ -164,12 +162,6 @@ function isValidPhoneNumber(){
     let phoneNumber = boxes["phone"].value;
     const regex = /^(01)[0-9]{9}$/;
     return regex.test(phoneNumber);
-}
-
-function isValidID(){
-    let id = boxes["id"].value;
-    const regex = /^[0-9]+$/;
-    return regex.test(id) && id.length > 6;
 }
 
 function isValidGender(){
@@ -211,7 +203,6 @@ function fillTable() {
       idCell.textContent = id
       const statusCell = document.createElement('td');
       statusCell.textContent = students[id]["status"];
-      console.log(students[id]["firstName"]);
       const buttonCell = document.createElement('td');
       const button = document.createElement('button');
       button.classList.add("edit");
@@ -227,12 +218,3 @@ function fillTable() {
       count++;
     }
 }
-
-    /*{% for column in data %}
-                <tr>
-                    <td></td>
-                    <td>{{column.name}}</td>
-                    <td>{{column.id}}</td>
-                    <td>{{column.status}}</td>
-                </tr>
-            {% endfor %}*/
