@@ -94,6 +94,10 @@ td > button{
     border-radius: 20px;
 
 }
+
+td > button:hover{
+    background: #969696;
+}
 .del{
     width: 75px;
     border-radius: 20px;
@@ -398,6 +402,6 @@ label{
     background: #23239f;
 }
 
-.in:hover{
+.in > input:hover{
     background: #0d0d4e;
 }
