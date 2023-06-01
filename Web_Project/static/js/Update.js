@@ -11,11 +11,15 @@ setupBoxesActions();
 
 
 const editButtons = document.querySelectorAll('.edit');
+const deleteButtons = document.querySelectorAll('.del');
 const studentInfo = document.querySelector('.student_info');
+const deletion = document.querySelector('.message');
 const exitBtn = document.getElementById('exit');
 const studentInfoDiv = document.querySelector('.student_info');
 const searchInput = document.getElementById("Search");
 const tableBody = document.querySelector('.table_data tbody');
+const cancelBtn = document.querySelector('.no');
+const DeleteBtn = document.querySelector('.yes');
 
  function getStudentsData(){
      let request = new XMLHttpRequest();
@@ -23,7 +27,33 @@ const tableBody = document.querySelector('.table_data tbody');
      request.send();
      students = JSON.parse(request.responseText);
  }
- editButtons.forEach(button => {
+
+
+deleteButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        deletion.style.display = 'block';
+        let id = event.target.id;
+        let deleteBtn = document.createElement('button');
+        deleteBtn.classList.add("yes");
+        deleteBtn.id = id;
+        deleteBtn.innerText = "Delete";
+
+        deletion.appendChild(deleteBtn);
+        deleteBtn.addEventListener('click', (event) => {
+            let id = event.target.id;
+            let request = new XMLHttpRequest();
+            request.open("GET",`http://127.0.0.1:8000/deleteData/${id}`,false);
+            request.send();
+            deletion.style.display = 'none';
+            location.reload();
+        });
+    });
+});
+
+cancelBtn.addEventListener('click', (event) => {
+    deletion.style.display = 'none';
+});
+editButtons.forEach(button => {
     button.addEventListener('click', (event) => {
         studentInfo.style.display = 'block';
         let id = event.target.id;

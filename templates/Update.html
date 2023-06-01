@@ -52,12 +52,19 @@
             </tbody>
         </table>
     </div>
+    <section class="message">
+        <div class="sure">
+            <p>Are you sure you want to delete this student?</p>
+            <button class="no">Cancel</button>
+        </div>
+    </section>
 </section>
 <div class="student_info">
     <label for="exit">
         <button id="exit">X</button>
     </label>
-    <form class="data">
+    <form class="data" method="post">
+        {% csrf_token %}
         <!-- I made const value right now but the value will be the student's data who we selected -->
         <!--first name input-->
         <div class="fn">
@@ -113,6 +120,7 @@
             <br>
             <select id="department" name="department" required>
                 <option disabled selected>Select..</option>
+                <option value="General">General</option>
                 <option value="CS">CS</option>
                 <option value="AI">AI</option>
                 <option value="IS">IS</option>
@@ -183,7 +191,9 @@
         </div>
     </form>
 </div>
-</body><script>
+
+</body>
+<script>
     const menuBtn = document.querySelector('.menu-btn');
     const navLinks = document.querySelector('.nav-links');
     menuBtn.addEventListener('click', () => {

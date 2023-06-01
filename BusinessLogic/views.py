@@ -1,5 +1,7 @@
+import json
+
 from django.http import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Student
 from django.core import serializers
 # Create your views here.
@@ -64,6 +66,17 @@ def updateStudentPage(request):
             student.save()
         except Exception as exception:
             print("Update Exception " + exception.args[0])
+        finally:
+            return render(request, 'Update.html')
+
+
+def deletion(request, ID):
+    if request.method == 'GET':
+        try:
+            student = get_object_or_404(Student, pk=ID)
+            student.delete()
+        except Exception as exception:
+            print("Delete Exception " + exception.args[0])
         finally:
             return render(request, 'Update.html')
 
