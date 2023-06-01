@@ -43,7 +43,8 @@ input[type="submit"]:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 110vh;
+  width: 80%;
 }
 
 .table-border {
@@ -62,6 +63,7 @@ table {
   display: inline-block;
   font-size: 18px;
   overflow: auto;
+  height: 450px;
 }
 
 table::-webkit-scrollbar{

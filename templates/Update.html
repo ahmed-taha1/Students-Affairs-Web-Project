@@ -45,6 +45,7 @@
                 <th class="iD">ID</th>
                 <th class="st">Status</th>
                 <th></th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -141,7 +142,7 @@
         <div class="ID">
             <label for="id">ID:*<span id="id-error" class="error-msg hide">Invalid!</span></label>
             <br>
-            <input type="text" id="id" name="id" placeholder="ex: 20210051"  required>
+            <input type="text" id="id" name="id" placeholder="ex: 20210051"  required readonly>
         </div>
         <br>
         <br>
@@ -179,10 +180,6 @@
         <!--submit button-->
         <div class="in">
             <input type="submit" value="Update">
-        </div>
-        <!-- delete button this is reset don't delete the student just clear the form -->
-        <div class="del">
-            <input type="reset" value="Delete">
         </div>
     </form>
 </div>

@@ -49,6 +49,22 @@ def updateStudentPage(request):
     if request.method == 'GET':
         return render(request, 'Update.html')
     elif request.method == 'POST':
+        try:
+            student = Student.objects.get(id=int(request.POST["id"]))
+            student.firstName = request.POST["first"]
+            student.lastName = request.POST["last"]
+            student.gender = request.POST["gender"]
+            student.dateOfBirth = request.POST["date"]
+            student.level = int(request.POST["level"])
+            student.gpa = request.POST["gpa"]
+            student.department = request.POST["department"]
+            student.email = request.POST["email"]
+            student.status = request.POST["status"]
+            student.phone = request.POST["phone"]
+            student.save()
+        except Exception as exception:
+            print("Update Exception " + exception.args[0])
+        finally:
             return render(request, 'Update.html')
 
 

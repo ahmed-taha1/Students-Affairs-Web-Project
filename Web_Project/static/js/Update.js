@@ -178,7 +178,6 @@ function isValidLevel(){
 function isValidStatus(){
     return boxes["Students status"].selectedIndex !== 0 ;
 }
-
 form.addEventListener('submit',(event)=>{
     for (let boxID in verifications){
         let isValid = verifications[boxID]();
@@ -187,6 +186,7 @@ form.addEventListener('submit',(event)=>{
             event.preventDefault();
         }
     }
+    changeFormMethod();
 })
 
 
@@ -203,17 +203,24 @@ function fillTable() {
       idCell.textContent = id
       const statusCell = document.createElement('td');
       statusCell.textContent = students[id]["status"];
-      const buttonCell = document.createElement('td');
-      const button = document.createElement('button');
-      button.classList.add("edit");
-      button.id = id;
-      button.innerText = "Edit";
-      buttonCell.append(button);
+      const editbuttonCell = document.createElement('td');
+      const editbutton = document.createElement('button');
+      editbutton.classList.add("edit");
+      editbutton.id = id;
+      editbutton.innerText = "Edit";
+      editbuttonCell.append(editbutton);
+      const delbuttonCell = document.createElement('td');
+      const delbutton = document.createElement('button');
+      delbutton.classList.add("del");
+      delbutton.id = id;
+      delbutton.innerText = "Delete";
+      delbuttonCell.append(delbutton);
       newRow.append(countCell);
       newRow.append(nameCell);
       newRow.append(idCell);
       newRow.append(statusCell);
-      newRow.append(buttonCell);
+      newRow.append(editbuttonCell);
+      newRow.append(delbuttonCell);
       tableBody.append(newRow);
       count++;
     }
