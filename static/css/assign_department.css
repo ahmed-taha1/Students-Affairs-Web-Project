@@ -106,20 +106,10 @@ th {
 }
 
 .save-button {
-  background-color: #840ad6; 
-  border: none; 
-  color: white; 
-  padding: 10px 20px; 
-  text-align: center; 
-  text-decoration: none; 
-  display: inline-block; 
-  font-size: 16px; 
-  cursor: pointer; 
-  border-radius: 5px; 
-  transition: background-color 0.3s ease; 
-  position: fixed; 
-  bottom: 20px; 
-  right: 20px; 
+    width: 75px;
+    border-radius: 20px;
+    background: #7D1FAB;
+    color: white;
 }
 
 .save-button:hover {

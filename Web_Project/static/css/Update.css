@@ -99,6 +99,9 @@ td > button{
     border-radius: 20px;
     background: red;
 }
+.del:hover{
+    background: #b2090c;
+}
 
 section > div > form{
     display: inline-block;
@@ -160,6 +163,9 @@ section{
     position: absolute;
     left: 90%;
     top: 3%;
+}
+#exit:hover{
+    background: #b2090c;
 }
 
 .data > div{
@@ -236,6 +242,9 @@ label{
     top: 50%;
 
 }
+.yes:hover{
+    background: #5c0586;
+}
 
 .no{
     width: 120px;
@@ -249,6 +258,9 @@ label{
     left: 30%;
     top: 75%;
 
+}
+.no:hover{
+    background: #5c0586;
 }
 
 
@@ -386,3 +398,6 @@ label{
     background: #23239f;
 }
 
+.in:hover{
+    background: #0d0d4e;
+}
