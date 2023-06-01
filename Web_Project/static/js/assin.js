@@ -3,13 +3,25 @@ let students = [];
 getStudentsData();
 fillTable();
 
+
 function getStudentsData(){
      let request = new XMLHttpRequest();
      request.open("GET","http://127.0.0.1:8000/students/",false);
      request.send();
      students = JSON.parse(request.responseText);
  }
+ /*
+function updateDepartment() {
+    saveButton.addEventListener('click', () => {
+        let id = event.target.id;
+            let request = new XMLHttpRequest();
+            request.open("GET",`http://127.0.0.1:8000/deleteData/${id}`,false);
+            request.send();
+            deletion.style.display = 'none';
+            location.reload();
 
+    });
+}*/
 function fillTable() {
     let tableBody = document.querySelector('tbody');
     let count = 1;
@@ -27,7 +39,7 @@ function fillTable() {
       const departmentCell = document.createElement('td');
       const departmentSelect = document.createElement('select');
       departmentSelect.name = "department";
-      const department = ["CS", "AI", "IS", "IT", "DS"];
+      const department = ["General","CS", "AI", "IS", "IT", "DS"];
       for (let i = 0; i < department.length; i++) {
           const option = document.createElement('option');
           option.value = department[i];
@@ -38,30 +50,27 @@ function fillTable() {
          departmentSelect.appendChild(option);
       }
       departmentCell.appendChild(departmentSelect);
+      const saveCell = document.createElement('td');
+      const saveBtn = document.createElement('button');
+      saveBtn.classList.add("save-button");
+      saveBtn.id = id;
+      console.log(saveBtn.id);
+      saveBtn.innerText = "Save";
+      saveCell.append(saveBtn);
       newRow.append(countCell);
       newRow.append(nameCell);
       newRow.append(idCell);
       newRow.append(levelCell);
       newRow.append(departmentCell);
+      newRow.append(saveCell);
       tableBody.append(newRow);
       count++;
     }
 }
 window.addEventListener('DOMContentLoaded', () => {
-  const saveButton = document.querySelector('.save-button');
   const searchForm = document.getElementById('search-form');
   const searchInput = document.getElementById('search');
   const tableRows = document.querySelectorAll('tbody tr');
-
-  saveButton.addEventListener('click', () => {
-    const selectedDepartment = document.querySelector('select[name="department"]:checked');
-    if (selectedDepartment) {
-      const selectedDepartmentValue = selectedDepartment.value;
-      console.log('Selected Department:', selectedDepartmentValue);
-    } else {
-      console.log('Please select a department.');
-    }
-  });
 
   searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
