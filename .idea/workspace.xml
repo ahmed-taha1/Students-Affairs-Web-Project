@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db82cb0f-46cd-4a3b-a758-4645b2bea762" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Web_Project/static/css/Update.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web_Project/static/css/Update.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web_Project/static/js/assin.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web_Project/static/js/assign_department.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/Update.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Update.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/assin.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/assign_department.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/assign_department.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/assign_department.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Web_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Web_Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_Project/static/css/assign_department.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web_Project/static/css/assign_department.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +75,7 @@
       <workItem from="1685586953219" duration="10840000" />
       <workItem from="1685612118798" duration="19218000" />
       <workItem from="1685631809652" duration="1258000" />
+      <workItem from="1685633220652" duration="88000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;V 3.999&quot;">
       <created>1685599511306</created>

@@ -109,6 +109,7 @@ th {
     width: 75px;
     border-radius: 20px;
     background: #7D1FAB;
+    color: white;
 }
 
 .save-button:hover {
