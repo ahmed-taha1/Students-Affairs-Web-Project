@@ -146,6 +146,7 @@ section{
 .student_info{
     display: none;
     border-radius: 46px;
+    border: 1px solid black;
     background-image: url("../assets/table-bg.png");
     position: absolute;
     top: 160px;

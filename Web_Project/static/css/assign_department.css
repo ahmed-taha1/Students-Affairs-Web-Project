@@ -5,11 +5,9 @@
   align-items: center;
   margin: 60px;
 }
-
-label {
-  display: none;
+#search-form > label{
+    display: none;
 }
-
 input[type="search"] {
   padding: 10px;
   border: none;
@@ -20,7 +18,7 @@ input[type="search"] {
   margin-right: 10px;
 }
 
-input[type="submit"] {
+#search-form > input[type="submit"] {
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -30,7 +28,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+#search-form > input[type="submit"]:hover {
   background-color: #680580;
 }
 
@@ -115,3 +113,92 @@ th {
 .save-button:hover {
   background-color: #680580; 
 }
+
+#Assign > div{
+    display: inline-block;
+    position: absolute;
+}
+
+#Assign > label{
+    color: white;
+    font-size: 20px;
+}
+
+
+.assign{
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    margin: 60px;
+    width: 20%;
+    height: 300px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background: #7D1FAB;
+    color: white;
+    display: none;
+}
+
+.assign > h3{
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.dep{
+    position: absolute;
+    top: 50%;
+    left: 17%;
+}
+
+#AssignDep{
+    padding-left: 5px;
+    height:27px ;
+    border-width: 1px ;
+    border-radius: 20px;
+    width: 195px;
+}
+.ID{
+    position: absolute;
+    top: 30%;
+    left: 17%;
+}
+
+.ID > input{
+    padding-left: 5px;
+    height:25px ;
+    border-width: 1px ;
+    border-radius: 20px;
+}
+
+#exit{
+    width: 20px;
+    border-radius: 100px;
+    background: red;
+    font-weight: bold;
+    position: absolute;
+    left: 90%;
+    top: 3%;
+}
+#exit:hover{
+    background: #b2090c;
+}
+.in{
+    position: absolute;
+    top: 70%;
+    left: 28%;
+}
+.in > input{
+  text-align: center;
+  border-radius: 20px;
+  background: #23239f;
+  color: white;
+  width: 190%;
+  height: 50px;
+  font-size: large;
+}
+
+.in > input:hover {
+  background: #0d0d4e;
+}
+

@@ -45,6 +45,15 @@ def registrationPage(request):
 def departmentAssignmentPage(request):
     if request.method == 'GET':
         return render(request, 'assign_department.html')
+    elif request.method == 'POST':
+        try:
+            student = Student.objects.get(id=int(request.POST["id"]))
+            student.department = request.POST["department"]
+            student.save()
+        except Exception as exception:
+            print("Department Assignment Exception " + exception.args[0])
+        finally:
+            return render(request, 'assign_department.html')
 
 
 def updateStudentPage(request):

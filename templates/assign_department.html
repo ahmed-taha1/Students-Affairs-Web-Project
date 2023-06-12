@@ -34,7 +34,33 @@
           <input id="search" type="search" name="id" placeholder="ex:20210069" formmethod="get" required>
           <input type="submit" formmethod="get" required>
         </form>
-
+      </div>
+      <div class="assign">
+          <h3>Assign Department</h3>
+        <form id = Assign method="post">
+            {% csrf_token %}
+            <div class="ID">
+            <label for="id">ID:*</label>
+            <br>
+            <input type="text" id="id" name="id" placeholder="ex: 20210051"  required readonly>
+            </div>
+          <div class="dep">
+            <label for="AssignDep">Department:*</label>
+                <select id="AssignDep" name="department" required>
+                <option disabled selected>Select..</option>
+                <option value="General">General</option>
+                <option value="CS">CS</option>
+                <option value="AI">AI</option>
+                <option value="IS">IS</option>
+                <option value="IT">IT</option>
+                <option value="DS">DS</option>
+                </select>
+            </div>
+          <div class="in">
+            <input type="submit" value="Assign">
+        </div>
+        </form>
+           <button id="exit" class="X">X</button>
       </div>
       <div class="table-container">
         <div class="table-wrapper">
@@ -47,10 +73,10 @@
                   <th>ID</th>
                   <th>Level</th>
                   <th>Department</th>
+                  <th></th>
                 </tr>
                 </thead>
                 <tbody>
-
                 </tbody>
               </table>
       </div>

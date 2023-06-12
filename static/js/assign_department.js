@@ -1,8 +1,13 @@
 
 let students = [];
+let form = document.querySelector('#Assign');
+
 getStudentsData();
 fillTable();
 
+let department = document.querySelector('.assign');
+let SaveBtn = document.querySelectorAll('.save-button');
+let exitBtn = document.getElementById('exit');
 
 function getStudentsData(){
      let request = new XMLHttpRequest();
@@ -10,18 +15,6 @@ function getStudentsData(){
      request.send();
      students = JSON.parse(request.responseText);
  }
- /*
-function updateDepartment() {
-    saveButton.addEventListener('click', () => {
-        let id = event.target.id;
-            let request = new XMLHttpRequest();
-            request.open("GET",`http://127.0.0.1:8000/deleteData/${id}`,false);
-            request.send();
-            deletion.style.display = 'none';
-            location.reload();
-
-    });
-}*/
 function fillTable() {
     let tableBody = document.querySelector('tbody');
     let count = 1;
@@ -37,25 +30,12 @@ function fillTable() {
       const levelCell = document.createElement('td');
       levelCell.textContent = students[id]["level"];
       const departmentCell = document.createElement('td');
-      const departmentSelect = document.createElement('select');
-      departmentSelect.name = "department";
-      const department = ["General","CS", "AI", "IS", "IT", "DS"];
-      for (let i = 0; i < department.length; i++) {
-          const option = document.createElement('option');
-          option.value = department[i];
-          option.textContent = department[i];
-          if (students[id]["department"] === department[i]) {
-          option.selected = true;
-          }
-         departmentSelect.appendChild(option);
-      }
-      departmentCell.appendChild(departmentSelect);
+      departmentCell.textContent = students[id]["department"];
       const saveCell = document.createElement('td');
       const saveBtn = document.createElement('button');
       saveBtn.classList.add("save-button");
       saveBtn.id = id;
-      console.log(saveBtn.id);
-      saveBtn.innerText = "Save";
+      saveBtn.innerText = "Assign";
       saveCell.append(saveBtn);
       newRow.append(countCell);
       newRow.append(nameCell);
@@ -67,6 +47,28 @@ function fillTable() {
       count++;
     }
 }
+
+exitBtn.addEventListener('click', () => {
+    department.style.display = 'none';
+});
+SaveBtn.forEach(button => {
+    button.addEventListener('click', (event) => {
+        department.style.display = 'block';
+        let id = event.target.id;
+        console.log(id);
+        let boxes = {
+            "department": document.querySelector('#AssignDep'),
+            "id": document.querySelector('#id'),
+        };
+        for (let student in students) {
+            if (student === id) {
+                boxes["department"].value = students[student]["department"];
+                boxes["id"].value = student;
+            }
+        }
+    });
+});
+
 window.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.getElementById('search-form');
   const searchInput = document.getElementById('search');

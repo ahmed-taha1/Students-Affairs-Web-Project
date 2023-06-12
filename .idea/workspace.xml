@@ -4,15 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3d1b893-7a3f-49a4-ba27-fec66ef53010" name="Changes" comment="" />
+    <list default="true" id="81e1862b-d1d0-4a3a-8631-270cea8ac978" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogic/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogic/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_Project/static/css/Student_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web_Project/static/css/Student_list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_Project/static/css/Update.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web_Project/static/css/Update.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_Project/static/css/assign_department.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web_Project/static/css/assign_department.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_Project/static/js/Update.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web_Project/static/js/Update.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_Project/static/js/assign_department.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web_Project/static/js/assign_department.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/Student_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Student_list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/Update.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Update.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/assign_department.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/assign_department.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/Update.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/Update.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/assign_department.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/assign_department.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assign_department.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/assign_department.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QuoXaZP3354ULi6STAk6eAHvQ0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "node.js.selected.package.tslint": "(autodetect)"
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -41,7 +76,20 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81e1862b-d1d0-4a3a-8631-270cea8ac978" name="Changes" comment="" />
+      <created>1686212867359</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686212867359</updated>
+      <workItem from="1686212954378" duration="3779000" />
+      <workItem from="1686570378963" duration="7288000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
